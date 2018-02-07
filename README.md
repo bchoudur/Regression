@@ -12,7 +12,7 @@ The number below represent how accurate the prediction is. So .62 means 62% accu
 The code below is the data part of the code that filter out the unneccessary part of the data from quandl.  Quadl is a website were you can
 get large amount of data for different applications.  The df.fillna(9999, inplace=True) basically just fills in any null data.  This must be done because the program cannot deal with null values.
 
-```Python
+```python
 df = quandl.get('WIKI/GOOGL')
 df = df[['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume', ]]
 df['HL_PCT'] = (df['Adj. High'] - df['Adj. Close']) / df['Adj. Close'] * 100.0
